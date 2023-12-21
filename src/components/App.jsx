@@ -11,18 +11,6 @@ export const App = () => {
       }}
     >
       React homework template
-      <p>
-        adsfgjykuiljkhgfdsyukljhgfvdcz≈cfghjggfho;hgfkljhgfdhjkljhgfhjkjlkjhgfhjkljhgcfhj
-      </p>
-      <p>
-        adsfgjykuiljkhgfdsyukljhgfvdcz≈cfghjggfho;hgfkljhgfdhjkljhgfhjkjlkjhgfhjkljhgcfhj
-      </p>
-      <p>
-        adsfgjykuiljkhgfdsyukljhgfvdcz≈cfghjggfho;hgfkljhgfdhjkljhgfhjkjlkjhgfhjkljhgcfhj
-      </p>
-      <p>
-        adsfgjykuiljkhgfdsyukljhgfvdcz≈cfghjggfho;hgfkljhgfdhjkljhgfhjkjlkjhgfhjkljhgcfhj
-      </p>
     </div>
   );
 };
