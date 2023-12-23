@@ -9,7 +9,6 @@ const MovieDetails = () => {
   const [error, setError] = useState([null]);
 
   const { movieId } = useParams();
-  //   const location = useLocation();
   useEffect(() => {
     const getDetails = async () => {
       setLoader(true);
@@ -26,8 +25,6 @@ const MovieDetails = () => {
     getDetails();
   }, [movieId, setError, setLoader]);
 
-  //   const { from } = state ?? {};
-
   return (
     <>
       <link to={'/'}>{'<- Back'}</link>
@@ -37,7 +34,6 @@ const MovieDetails = () => {
       ) : error ? (
         <p>{error}</p>
       ) : (
-        // movie && <MovieDetailsComponent movie={movie} from={from} />
         movie && <MovieDetailsBlok movie={movie} />
       )}
 
