@@ -20,12 +20,13 @@ const Home = () => {
     };
     getTrendings();
   }, []);
-  return;
-  <>
-    <h2>Trending today</h2>
-    {loader && <h2>...Loading</h2>}
-    <TrendingList movies={movies} />
-    {error && <p>{error.message}</p>}
-  </>;
+  return (
+    <>
+      <h2>Trending today</h2>
+      {loader && <h2>...Loading</h2>}
+      <TrendingList movies={movies} />
+      {error && <p>{error.message}</p>}
+    </>
+  );
 };
 export default Home;

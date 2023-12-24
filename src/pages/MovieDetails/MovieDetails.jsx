@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'service/movie-cervice';
 import MovieDetailsBlok from 'components/MovieDetailsBlok/MovieDetailsBlok';
 
