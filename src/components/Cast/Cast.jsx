@@ -24,6 +24,7 @@ const Cast = () => {
     };
     getCast();
   }, [movieId, setError, setLoader]);
+  console.log(cast);
   return (
     <>
       <h4>Cast</h4>

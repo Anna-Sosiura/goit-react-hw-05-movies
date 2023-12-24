@@ -1,16 +1,17 @@
 import React from 'react';
-import { NavLinkStyle } from './Header.styled';
+import { HeaderList } from './Header.styled';
+import { StyledNavLink } from 'components/Components.styled';
 const Header = () => {
   return (
     <div>
-      <ul>
+      <HeaderList>
         <li>
-          <NavLinkStyle to="/">Home</NavLinkStyle>
+          <StyledNavLink to="/">Home</StyledNavLink>
         </li>
         <li>
-          <NavLinkStyle to="/movies">Movies</NavLinkStyle>
+          <StyledNavLink to="/movies">Movies</StyledNavLink>
         </li>
-      </ul>
+      </HeaderList>
     </div>
   );
 };

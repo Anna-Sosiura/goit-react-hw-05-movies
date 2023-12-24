@@ -13,7 +13,7 @@ export const getTrending = async () => {
 };
 export const searchMovies = async query => {
   const { data } = await axios.get(`search/movie?${query}`);
-  return data.results;
+  return data;
 };
 export const getMovieDetails = async movieId => {
   const { data } = await axios.get(`movie/${movieId}`);
@@ -21,11 +21,11 @@ export const getMovieDetails = async movieId => {
 };
 export const getMovieCredits = async movieId => {
   const { data } = await axios.get(`movie/${movieId}/credits`);
-  return data.cast;
+  return data;
 };
 export const getMovieReviews = async movieId => {
   const { data } = await axios.get(`movie/${movieId}/reviews`);
-  return data.results;
+  return data;
 };
 
 // /trending/get-trending список найпопулярніших фільмів на сьогодні для створення колекції на головній сторінці.

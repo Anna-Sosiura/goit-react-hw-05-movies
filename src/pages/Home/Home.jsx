@@ -1,5 +1,6 @@
 import { getTrending } from 'service/movie-cervice';
 import TrendingList from 'components/TrendingList/TrendingList';
+import Header from 'components/Header/Header';
 const { useState, useEffect } = require('react');
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -22,6 +23,7 @@ const Home = () => {
   }, []);
   return (
     <>
+      <Header />
       <h2>Trending today</h2>
       {loader && <h2>...Loading</h2>}
       <TrendingList movies={movies} />

@@ -1,3 +1,4 @@
+import { StyledLink } from 'components/Components.styled';
 const MovieDetailsBlok = ({ movie }) => {
   const { poster_path, overview, title, release_date, genres, vote_average } =
     movie ?? {};
@@ -23,22 +24,22 @@ const MovieDetailsBlok = ({ movie }) => {
           <h3>Overwiew</h3>
           <p>{overview}</p>
           <h3>Genres</h3>
-          <list>
+          <ul>
             {genres.map(({ id, name }) => (
               <span key={id}>{name}</span>
             ))}
-          </list>
+          </ul>
         </div>
       </section>
       <span>Additional information:</span>
-      <list>
+      <ul>
         <li>
-          <link to="cast">Cast</link>
+          <StyledLink to="cast">Cast</StyledLink>
         </li>
         <li>
-          <link to="reviews">Reviews</link>
+          <StyledLink to="reviews">Reviews</StyledLink>
         </li>
-      </list>
+      </ul>
     </>
   );
 };

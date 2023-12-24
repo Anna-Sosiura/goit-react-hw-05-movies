@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'service/movie-cervice';
 import MovieDetailsBlok from 'components/MovieDetailsBlok/MovieDetailsBlok';
-
+import { StyledLink } from 'components/Components.styled';
+import Header from 'components/Header/Header';
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [loader, setLoader] = useState([false]);
@@ -27,7 +28,8 @@ const MovieDetails = () => {
 
   return (
     <>
-      <link to={'/'}>{'<- Back'}</link>
+      <Header />
+      <StyledLink to={'/'}>{'<- Back'}</StyledLink>
 
       {loader ? (
         <p>Loading...</p>
