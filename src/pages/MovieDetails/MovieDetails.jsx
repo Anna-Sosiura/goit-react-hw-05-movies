@@ -3,11 +3,10 @@ import { Outlet, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'service/movie-cervice';
 import MovieDetailsBlok from 'components/MovieDetailsBlok/MovieDetailsBlok';
 import { StyledLink } from 'components/Components.styled';
-import Header from 'components/Header/Header';
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
-  const [loader, setLoader] = useState([false]);
-  const [error, setError] = useState([null]);
+  const [loader, setLoader] = useState(false);
+  const [error, setError] = useState(null);
 
   const { movieId } = useParams();
   useEffect(() => {
@@ -25,10 +24,8 @@ const MovieDetails = () => {
     };
     getDetails();
   }, [movieId, setError, setLoader]);
-
   return (
     <>
-      <Header />
       <StyledLink to={'/'}>{'<- Back'}</StyledLink>
 
       {loader ? (

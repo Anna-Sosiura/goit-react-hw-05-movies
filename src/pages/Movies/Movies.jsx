@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { searchMovies } from '../../service/movie-cervice';
 import SearchForm from 'components/SearchForm/SearchForm';
-import Header from 'components/Header/Header';
 import SearchMovies from 'components/SearchMovies/SearchMovies';
 const Movies = () => {
   const [search, setSearch] = useSearchParams();
   const [movies, setMovies] = useState([]);
-  const [loader, setLoader] = useState([false]);
-  const [error, setError] = useState([null]);
+  const [loader, setLoader] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const searchParams = search.toString();
@@ -35,7 +34,6 @@ const Movies = () => {
 
   return (
     <>
-      <Header />
       <SearchForm handleSearch={handleSearch} />
       {loader ? (
         <p>Loading...</p>
