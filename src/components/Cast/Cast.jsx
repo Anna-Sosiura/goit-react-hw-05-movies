@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCredits } from '../../service/movie-cervice';
-// import {getMovieCredits} from 'service/movie-cervice'
 
 const Cast = () => {
   const [cast, setCast] = useState([]);

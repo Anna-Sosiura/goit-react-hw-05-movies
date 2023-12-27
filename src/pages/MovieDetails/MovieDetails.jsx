@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'service/movie-cervice';
 import MovieDetailsBlok from 'components/MovieDetailsBlok/MovieDetailsBlok';
@@ -35,8 +35,9 @@ const MovieDetails = () => {
       ) : (
         movie && <MovieDetailsBlok movie={movie} />
       )}
-
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
